@@ -1,35 +1,5 @@
-// // online shop
-// let topBlock = document.querySelector(".top-block-1");
-// let topButton = document.createElement("button");
-// topButton.innerText = "შეძენა";
-// topButton.classList.add("topbottom");
-// topBlock.appendChild(topButton);
+//  slider
 
-// topBlock.addEventListener("mouseenter", function () {
-//   topBlock.style.background = "green";
-//   topBlock.classList.add("active-btn");
-//   topBlock.appendChild(topButton);
-// });
-
-// topBlock.addEventListener("mouseout", function () {
-//   topBlock.classList.remove("active-btn");
-// // });
-
-// let title = document.querySelector(".top-title");
-// let div = document.createElement("div");
-// let ulLIst = document.createElement("ul");
-// let liList = document.createElement("li");
-// liList.appendChild(title);
-// ulLIst.appendChild(liList);
-
-// let bottom = document.querySelector(".botttom-header");
-// bottom.appendChild(ulLIst);
-
-// let div = document.querySelectorAll(".top-block-1");
-// div.addEventListener("mouseenter", function () {
-//   let icon = document.querySelectorAll(".fa-sharp");
-//   icon.style.color = "white";
-// });
 const swiper = new Swiper(".swiper", {
   // Optional parameters
 
@@ -55,74 +25,16 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 });
 
-// აქ ვცდი შევქმნა მასივი და სლაიდერის ფოტოებს ჩავამატო
-// let data = [
-//   {
-//     mainTitle: "ქონების დაზღვევა",
-//     title: "ყველაზე ხელსაყრელი პირობებით",
-//   },
-//   {
-//     mainTitle: "ავტო დაზღვევა",
-//     title: "ყველაზე ხელსაყრელი პირობებით",
-//   },
-//   {
-//     mainTitle: "ჯანმრთელობის დაზღვევა",
-//     title: "ყველაზე ხელსაყრელი პირობებით",
-//   },
-// ];
+// Appending button in top-block divs. online-shopping button
 
-// const slides = document.querySelector(".swiper-slide");
-// function add(data) {
-//   for (i = 0; i < slides.length; i++) {
-//     // initially set the display to
-//     // none for every image.
-//     let tagtitle = document.createElement("h2");
-//     tagtitle.classList.add("slider-main-title");
-//     tagtitle.append(data[i].mainTitle);
+const block = document.querySelectorAll(".top-block-1");
 
-//     //   sliderContent.append(tagtitle);
-//     slides[i].append(tagtitle);
-//   }
-// }
-// add(data);
-
-// increase by 1, Global variable
-// slideIndex++;
-// const sliderContent = document.querySelectorAll(".swiper-slide");
-// data.forEach((a) => {
-//   let tagtitle = document.createElement("h2");
-//   tagtitle.classList.add("slider-main-title");
-//   tagtitle.append(data.mainTitle);
-//   // let h2tag = createh2tag(data[sliderindex]);
-//   sliderContent.append(tagtitle);
-// });
-
-// function createh2tag(data) {
-//   let tagtitle = document.createElement("h2");
-//   tagtitle.classList.add("slider-main-title");
-//   tagtitle.append(data.mainTitle);
-//   let h2tag = createh2tag(data[sliderindex]);
-//   sliderContent.appendChild(h2tag);
-// }
-// createh2tag();
-
-// function insertSliderTitle(data) {
-//   const myswiper = document.querySelector(".swiper-wrapper");
-//   data.forEach((a) => {
-//     let dataDiv = document.querySelectorAll(".swiper-slide");
-//     let newdata = document.createElement("h2");
-//     newdata.classList.add("slider-main-title");
-//     let newtitle = document.createElement("h3");
-//     newtitle.classList.add("slider-second-title");
-
-//     object.values(a).forEach((value) => {
-//       dataDiv.appendChild(newdata);
-//       dataDiv.appendChild(newtitle);
-//       myswiper.appendChild(dataDiv);
-//     });
-//   });
-// }
-
-// insertSliderTitle(data);
-
-// აქ ვცდილობ ავაწყო ჩამოსასშლელი ნავიგაციის
+function addBtn(block) {
+  for (let i = 0; i < block.length; i++) {
+    let button = document.createElement("button");
+    button.innerText = "შეძენა";
+    button.classList.add("online-button");
+    block[i].append(button);
+  }
+}
+addBtn(block);
