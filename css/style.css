@@ -57,6 +57,22 @@ body {
 }
 
 /* SOS button and dropdown styles */
+.mobile-sos-btn {
+  width: 336px;
+  height: 71px;
+  border-radius: 12px;
+  background-color: #ee303c;
+  font-size: 22px;
+  box-shadow: 0 5px 16px #ee303c4d;
+  color: white;
+  border: none;
+  display: none;
+}
+.mobile-sos-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .sos-ul {
   display: flex;
   padding: 10px 0;
@@ -257,6 +273,11 @@ body {
   font-size: 20px;
 
   line-height: 22px;
+  cursor: pointer;
+}
+.bottom-li:hover {
+  color: white;
+  text-decoration: none;
 }
 
 /* Agent button styles  */
@@ -293,8 +314,12 @@ body {
 }
 
 /* footer blocok styles */
+.mobile-footer {
+  display: none;
+}
 .footer {
   height: 373px;
+  height: 100%;
   background-color: #ffffff;
   width: 100%;
   padding: 45px 30px;
@@ -321,9 +346,12 @@ body {
   font-weight: lighter;
 }
 
-.footer-li:nth-child(1) {
-  font-weight: bold;
+.bold-li {
+  font-weight: bolder;
 }
+/* .footer-li:nth-child(1) {
+  font-weight: bold;
+} */
 .footer-img {
   display: flex;
   flex-direction: row;
@@ -335,6 +363,13 @@ body {
   margin-top: 48px;
   display: flex;
   align-items: center;
+}
+.footer-5 {
+  display: flex;
+  /* width: 100%; */
+  align-items: flex-start;
+  gap: 150px;
+  /* flex-wrap: wrap; */
 }
 
 /* Main concent styles - container styles */
@@ -422,6 +457,7 @@ body {
 }
 
 /* second section styles */
+
 .section-title {
   font-size: 36px;
   color: #707070;
@@ -474,8 +510,12 @@ body {
 .top-block-1:hover {
   background-color: #006a9f;
   width: 270px;
+
   height: 200px;
   color: #d0d0d0;
+}
+.top-block-title {
+  text-align: center;
 }
 .top-block-1:hover .fa-sharp {
   color: white;
@@ -739,4 +779,349 @@ a:hover {
 .news-divs:hover {
   border: 2px solid #006a9f;
   border-radius: 12px;
+}
+
+/* აქ მობილური ფუტერს ვტესტავ */
+
+.mobile-footer-div {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+.mobile-line {
+  width: 111px;
+  background-color: #707070;
+  height: 2px;
+}
+.mobile-line-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  display: none;
+}
+
+.mobile-shopping {
+  display: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.fa-cart-shopping {
+  color: #e2202c;
+}
+.mobile-header {
+  display: flex;
+  background: rgb(0, 106, 159);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 106, 159, 1) 7%,
+    rgba(255, 255, 255, 1) 44%
+  );
+  align-items: center;
+  justify-content: center;
+  height: 99px;
+  display: none;
+}
+.mobile-logo {
+  width: 130px;
+}
+.fa-bars {
+  margin-left: 44px;
+  color: #e2202c;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* burger bar */
+
+.burger-navigation {
+  display: none;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 12000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 36px;
+  animation: myfirst 0.5s;
+  animation-direction: normal;
+  scroll-behavior: smooth;
+  /* position: relative; */
+}
+@keyframes myfirst {
+  0% {
+    left: 100%;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+.top-burger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 51px;
+}
+.active-bar {
+  display: block;
+  z-index: 120000;
+  /* height: 1000px; */
+  /* min-height: 100vh;
+  overflow: hidden; */
+}
+.inactive {
+  animation: mySecond 0.5s;
+  animation-direction: normal;
+}
+@keyframes mySecond {
+  0% {
+    right: 100%;
+    top: 0px;
+  }
+  100% {
+    right: 0px;
+    top: 0px;
+  }
+}
+
+.burger-logo {
+  width: 38px;
+}
+.fa-xmark {
+  font-size: 30px;
+  color: #e2202c;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.bottom-li-burger {
+  font-size: 16px;
+  color: #707070;
+  margin-right: 107px;
+  margin-left: 20px;
+}
+.bottom-li-person {
+  width: 62px;
+  height: 62px;
+  color: white;
+  background-color: #006a9f;
+}
+.bottom-ul-burger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.burger-sos {
+  background: #ee303c;
+  font-size: 18px;
+  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  border: none;
+}
+.sos-burger-a {
+  font-size: 18px;
+  height: 44px;
+  width: 176px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 22px;
+  /* padding: 10px 0; */
+  /* text-decoration: none; */
+  color: white;
+}
+.sos-burger-a:visited {
+  text-decoration: none;
+  color: white;
+}
+.sos-burger-a:hover {
+  text-decoration: none;
+  color: white;
+}
+.sos-burger-block {
+}
+.dropbtn-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 59px;
+  margin-bottom: 35px;
+  align-items: center;
+}
+.dropbtn-burger {
+  color: #707070;
+  font-size: 18px;
+  /* margin-bottom: 35px; */
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* justify-content: space-between; */
+  /* margin-top: 59px; */
+}
+.burger-icons {
+  color: #e2202c;
+  margin-right: 18px;
+}
+
+.agent-burger {
+  background-color: #e2202c;
+  color: white;
+  border-radius: 12px;
+  width: 318px;
+  width: 100%;
+  height: 66px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+.burger-nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  font-size: 16px;
+  color: #707070;
+  gap: 37px;
+  margin-bottom: 71px;
+}
+.language-burger {
+  gap: 19px;
+  display: flex;
+  flex-direction: column;
+  color: #707070;
+  position: relative;
+}
+.burger-a:hover {
+  text-decoration: none;
+}
+.burger-a-red {
+  color: #ee303c;
+}
+
+.red-language-symbol {
+  background-color: #ee303c;
+  width: 21px;
+  border-radius: 12px;
+  height: 14px;
+  box-shadow: 0 7px 7px 0;
+  position: absolute;
+  top: 0;
+  left: -39px;
+}
+.burger-contact {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.fa-circle-phone {
+  color: #e2202c;
+}
+h5 {
+  color: #707070;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.phone-number-burger {
+  font-size: 26px;
+  color: #ee303c;
+  font-weight: bold;
+}
+.burger-contact-number {
+  text-align: end;
+}
+.fa-angle-right {
+  color: #ee303c;
+  font-size: 15px;
+}
+.sos-div-burger {
+  position: fixed;
+  display: none;
+  height: 300px;
+  top: 50%;
+  right: 50%;
+  margin-top: -150px; /* Negative half of height. */
+  margin-right: -250px;
+  animation: sosAnimation;
+  /* transition: all 0.5s ease; */
+}
+
+@keyframes sosAnimation {
+}
+.fa-xmark-sos {
+  color: white;
+  position: fixed;
+  right: 17px;
+  top: 15px;
+  font-size: 21px;
+}
+.sos-ul-burger {
+  align-items: center;
+  justify-content: space-between;
+  /* height: 130px; */
+  gap: 15px;
+  display: flex;
+  /* padding: 26px 0; */
+  flex-direction: column;
+  /* justify-content: center; */
+  /* gap: 15px;
+  text-align: center;
+  margin-top: 10px;
+  gap: 15px; */
+}
+.sos-title {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 26px;
+}
+.sos-burger-block:hover .sos-div-burger {
+  display: none;
+}
+/* აქ არის ფიზიკური პირების ღილაკს რო აწვები ის */
+.dropdown-content-burger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  /* display: block; */
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin: 0 auto;
+  display: none;
+  animation: myfirst 0.5s;
+}
+.dropdown-icon-burger {
+  font-size: 24px;
+  color: #e2202c;
+  margin-right: 28px;
+}
+
+.dropdown-a {
+  color: #707070;
+  font-size: 18px;
+  /* width: 169px; */
+}
+.fa-mark-burger {
+  position: fixed;
+  top: 50px;
+  right: 35px;
+}
+
+.display {
+  display: block;
 }

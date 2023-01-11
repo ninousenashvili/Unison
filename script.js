@@ -38,3 +38,56 @@ function addBtn(block) {
   }
 }
 addBtn(block);
+
+// burger -bar
+
+const burgerBar = document.querySelector(".fa-bars");
+const burgerNav = document.querySelector(".burger-navigation");
+const xBtn = document.querySelector(".fa-xmark");
+const container = document.querySelector(".container");
+
+burgerBar.addEventListener("click", function () {
+  burgerNav.classList.toggle("active-bar");
+  container.style.display = "none";
+  document.querySelector(".footer").style.display = "none";
+});
+
+xBtn.addEventListener("click", function () {
+  // burgerNav.classList.add("inactive");
+  burgerNav.classList.remove("active-bar");
+  container.style.display = "block";
+  document.querySelector(".footer").style.display = "block";
+  sosDiv.style.display = "none";
+});
+
+const activeBar = document.querySelector(".active-bar");
+
+// const physicalPerson = document.querySelector(".dropbtn-burger-1");
+// physicalPerson.addEventListener("click", function () {});
+
+const sosXbtn = document.querySelector(".fa-xmark-sos");
+const sosDiv = document.querySelector(".sos-div-burger");
+const sosBtn = document.querySelector(".sos-burger-block");
+
+sosBtn.addEventListener("click", function () {
+  sosDiv.style.display = "block";
+});
+sosXbtn.addEventListener("mouseenter", function () {
+  sosDiv.style.display = "none";
+});
+
+// "physical person" item clicked  (overlay shown)
+
+const physicalBtn = document.querySelector(".dropbtn-burger-1");
+physicalBtn.addEventListener("click", function () {
+  document.querySelector(".dropdown-content").style.display = "block";
+  document.querySelector(".dropdown-content-burger").style.display = "block";
+  document.querySelector(".dropdown-content-burger").style.display = "flex";
+
+  sosDiv.style.display = "none";
+});
+
+const closeBtn = document.querySelector(".fa-mark-burger");
+closeBtn.addEventListener("click", function () {
+  document.querySelector(".dropdown-content").style.display = "none";
+});
